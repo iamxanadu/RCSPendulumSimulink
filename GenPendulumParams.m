@@ -6,6 +6,11 @@ M = 1.79; % kg
 % Pendulum string length L
 L = 3; % m
 
+% Torsional Pendulum Mode Params
+k_tor = 1; % spring constant
+rho_tor = 0.5; % damping
+w0 = [0;0;0.05]; % rad/s
+
 % Cylinder dimensions
 % TODO Fill this in if needed. For now use measurements given.
 
@@ -21,9 +26,9 @@ Iyyp = Iyy + M*L^2;
 % Inertia tensor
 I = [Ixxp 0 0; 0 Iyyp 0; 0 0 Izz];
 
-h = 0.1; % s
+h = 0.05; % s
 d = 80; % N
-tau = 0.101;
+tau = 0.3;
 
 
 
